@@ -1,0 +1,15 @@
+<h1>Editar cuenta</h1>
+<div class="row">
+    <div class="col-sm-6">
+        <form action="<?php echo APP_URL . "cuentas/editar"; ?>" method="POST">
+            <input type="hidden" name="id" value="<?php echo $this->cuenta["id"]; ?>">
+            <p>
+                <label for="name">Nombre</label>
+                <input type="text" name="name" value="<?php echo $this->cuenta["name"]; ?>" class="form-control">
+            </p>
+            <p>
+                <input type="submit" value="Guardar cuenta" class="btn-primary add" onclick="if(!confirm('¿Desea guardar cambios?')) return false;">
+            </p>
+        </form>
+    </div>
+</div>
